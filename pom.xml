@@ -22,6 +22,7 @@
 				<configuration>
 					<systemPropertyVariables>
 						<gridURL>http://localhost:4444</gridURL>
+						<appURL>http://demo.actitime.com</appURL>
 					</systemPropertyVariables>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>

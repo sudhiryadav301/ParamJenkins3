@@ -12,15 +12,13 @@ import org.testng.annotations.Test;
 
 public class Demo1 {
 
-
-	@Parameters({"gridURL"})
+	@Parameters({"gridURL","appURL"})
 	@Test
-	public void testA(String gridURL) throws Exception
+	public void testA(String gridURL,String appURL) throws Exception
 	{
 		Reporter.log("testA of Demo1 of day 21",true);
 		WebDriver driver=new RemoteWebDriver(new URL(gridURL),new ChromeOptions());
-		//WebDriver driver=new ChromeDriver();
-		driver.get("https://demo.actitime.com/login.do");
+		driver.get(appURL);
 		System.out.println(driver.getTitle());
 		driver.findElement(By.id("username")).sendKeys("admin");
 		driver.findElement(By.name("pwd")).sendKeys("manager");
@@ -30,5 +28,4 @@ public class Demo1 {
 		driver.quit();
 	}
 }
-
 
